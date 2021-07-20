@@ -1,4 +1,6 @@
 // Get our elements
+//TODO: add full screen feature - done
+
 const player = document.querySelector(".player");
 const video = player.querySelector(".viewer");
 const progress = player.querySelector(".progress");
@@ -38,6 +40,9 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+function fullScreenMode(e) {
+  video.requestFullscreen();
+}
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
@@ -57,3 +62,5 @@ progress.addEventListener("mouseup", () => (mousedown = false));
 fullScreenBtn.addEventListener("click", () => {
   console.log("clicked");
 });
+
+fullScreenBtn.addEventListener("click", fullScreenMode);
