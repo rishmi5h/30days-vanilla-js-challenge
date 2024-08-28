@@ -1,121 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VanillaJS Projects</title>
-  </head>
-  <body>
-    <ul>
-      <li><a target="_blank" href="01-Drum-Kit/index.html">01-Drum-Kit</a></li>
-      <li><a target="_blank" href="02-Clock/index.html">02-Clock</a></li>
-      <li><a target="_blank" href="03-Css-Js/index.html">03-Css-Js</a></li>
-      <li><a target="_blank" href="04-Array/index.html">04-Array</a></li>
-      <li>
-        <a target="_blank" href="05-Flex-Panel/index.html">05-Flex-Panel</a>
-      </li>
-      <li>
-        <a target="_blank" href="06-Type-Ahead/index.html">06-Type-Ahead</a>
-      </li>
-      <li><a target="_blank" href="07-Array-02/index.html">07-Array-02</a></li>
-      <li>
-        <a target="_blank" href="08-Html-Canvas/index.html">08-Html-Canvas</a>
-      </li>
-      <li>
-        <a target="_blank" href="09-Dev-Tools/index.html">09-Dev-Tools</a>
-      </li>
-      <li>
-        <a target="_blank" href="10-Checkboxes/index.html">10-Checkboxes</a>
-      </li>
-      <li>
-        <a target="_blank" href="11-Video-Player/index.html">11-Video-Player</a>
-      </li>
-      <li>
-        <a target="_blank" href="12-Key-Sequence/index.html">12-Key-Sequence</a>
-      </li>
-      <li>
-        <a target="_blank" href="13-Slide-on-Scroll/index.html"
-          >13-Slide-on-Scroll</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="14-JS-Copying-VS-Referencing/index.html"
-          >14-JS-Copying-VS-Referencing</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="15-Local-Storage/index.html"
-          >15-Local-Storage</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="16-Mouse-Move-Shadow/index.html"
-          >16-Mouse-Move-Shadow</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="17-Sort-Without-Articles/index.html"
-          >17-Sort-Without-Articles</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="18-Adding-times-Reduce/index.html"
-          >18-Adding-times-Reduce</a
-        >
-      </li>
-      <li><a target="_blank" href="19-Webcam/index.html">19-Webcam</a></li>
-      <li>
-        <a target="_blank" href="20-Speech-Recognition/index.html"
-          >20-Speech-Recognition</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="21-Geolocation/index.html">21-Geolocation</a>
-      </li>
-      <li>
-        <a target="_blank" href="22-follow-link-highlighter/index.html"
-          >22-follow-link-highlighter</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="23-Speech-Synthesiser/index.html"
-          >23-Speech-Synthesiser</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="24-Sticky-Nav/index.html">24-Sticky-Nav</a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          href="25-Event_Capture-Propagation-Bubbling/index.html"
-          >25-Event_Capture-Propagation-Bubbling</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="26-Follow-Along-Nav/index.html"
-          >26-Follow-Along-Nav</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="27-Click-and-Drag/index.html"
-          >27-Click-and-Drag</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="28-Video-Speed-Control/index.html"
-          >28-Video-Speed-Control</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="29-Countdown-Timer/index.html"
-          >29-Countdown-Timer</a
-        >
-      </li>
-      <li>
-        <a target="_blank" href="https://hit-it.netlify.app">30-Whack-A-Mole</a>
-      </li>
-    </ul>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30 Days of Vanilla JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2.5em;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      list-style-type: none;
+      padding: 0;
+      flex-grow: 1;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .card a {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+      border-left: 5px solid #e0e0e0;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:nth-child(3n) a {
+      border-color: #4caf50;
+    }
+
+    .card:nth-child(3n+1) a {
+      border-color: #2196f3;
+    }
+
+    .card:nth-child(3n+2) a {
+      border-color: #ff9800;
+    }
+
+    .card:hover a {
+      border-color: #9c27b0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px 0;
+      /* background-color: #333; */
+      color: #fff;
+    }
+
+    footer a {
+      color: #070707;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: opacity 0.2s ease;
+    }
+
+    footer a:hover {
+      opacity: 0.8;
+    }
+
+    footer a+a {
+      margin-left: 15px;
+    }
+
+    footer svg {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>30 Days of Vanilla JS</h1>
+  </header>
+  <ul class="card-container">
+    <li class="card"><a target="_blank" href="01-Drum-Kit/index.html">01-Drum-Kit</a></li>
+    <li class="card"><a target="_blank" href="02-Clock/index.html">02-Clock</a></li>
+    <li class="card"><a target="_blank" href="03-Css-Js/index.html">03-Css-Js</a></li>
+    <li class="card"><a target="_blank" href="04-Array/index.html">04-Array</a></li>
+    <li class="card"><a target="_blank" href="05-Flex-Panel/index.html">05-Flex-Panel</a></li>
+    <li class="card"><a target="_blank" href="06-Type-Ahead/index.html">06-Type-Ahead</a></li>
+    <li class="card"><a target="_blank" href="07-Array-02/index.html">07-Array-02</a></li>
+    <li class="card"><a target="_blank" href="08-Html-Canvas/index.html">08-Html-Canvas</a></li>
+    <li class="card"><a target="_blank" href="09-Dev-Tools/index.html">09-Dev-Tools</a></li>
+    <li class="card"><a target="_blank" href="10-Checkboxes/index.html">10-Checkboxes</a></li>
+    <li class="card"><a target="_blank" href="11-Video-Player/index.html">11-Video-Player</a></li>
+    <li class="card"><a target="_blank" href="12-Key-Sequence/index.html">12-Key-Sequence</a></li>
+    <li class="card"><a target="_blank" href="13-Slide-on-Scroll/index.html">13-Slide-on-Scroll</a></li>
+    <li class="card"><a target="_blank" href="14-JS-Copying-VS-Referencing/index.html">14-JS-Copying-VS-Referencing</a>
+    </li>
+    <li class="card"><a target="_blank" href="15-Local-Storage/index.html">15-Local-Storage</a></li>
+    <li class="card"><a target="_blank" href="16-Mouse-Move-Shadow/index.html">16-Mouse-Move-Shadow</a></li>
+    <li class="card"><a target="_blank" href="17-Sort-Without-Articles/index.html">17-Sort-Without-Articles</a></li>
+    <li class="card"><a target="_blank" href="18-Adding-times-Reduce/index.html">18-Adding-times-Reduce</a></li>
+    <li class="card"><a target="_blank" href="19-Webcam/index.html">19-Webcam</a></li>
+    <li class="card"><a target="_blank" href="20-Speech-Recognition/index.html">20-Speech-Recognition</a></li>
+    <li class="card"><a target="_blank" href="21-Geolocation/index.html">21-Geolocation</a></li>
+    <li class="card"><a target="_blank" href="22-follow-link-highlighter/index.html">22-follow-link-highlighter</a></li>
+    <li class="card"><a target="_blank" href="23-Speech-Synthesiser/index.html">23-Speech-Synthesiser</a></li>
+    <li class="card"><a target="_blank" href="24-Sticky-Nav/index.html">24-Sticky-Nav</a></li>
+    <li class="card"><a target="_blank"
+        href="25-Event_Capture-Propagation-Bubbling/index.html">25-Event_Capture-Propagation-Bubbling</a></li>
+    <li class="card"><a target="_blank" href="26-Follow-Along-Nav/index.html">26-Follow-Along-Nav</a></li>
+    <li class="card"><a target="_blank" href="27-Click-and-Drag/index.html">27-Click-and-Drag</a></li>
+    <li class="card"><a target="_blank" href="28-Video-Speed-Control/index.html">28-Video-Speed-Control</a></li>
+    <li class="card"><a target="_blank" href="29-Countdown-Timer/index.html">29-Countdown-Timer</a></li>
+    <li class="card"><a target="_blank" href="https://hit-it.netlify.app">30-Whack-A-Mole</a></li>
+  </ul>
+  <footer>
+    <a href="https://github.com/rishmi5h/30days-vanilla-js-challenge" target="_blank">
+      <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          fill="#333"></path>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/rishmi5h/" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+        <path fill="#333"
+          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </svg>
+    </a>
+  </footer>
+</body>
+
 </html>
